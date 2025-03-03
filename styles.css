@@ -1,24 +1,24 @@
 /* Page Styling */
 body {
-    font-family: Arial, sans-serif; /* Font setting */
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4; /* Background color */
-    color: #333; /* Text color */
+    background-color: #f4f4f4;
+    color: #333;
 }
 
 /* Header */
 header {
-    background-color: #004080; /* Background color */
-    color: white; /* Text color */
+    background-color: #004080;
+    color: white;
     text-align: center;
-    padding: 15px; /* Padding */
+    padding: 15px;
 }
 
 /* Navigation Bar */
 nav {
-    background-color: #333; /* Background color */
-    padding: 10px 0; /* Padding */
+    background-color: #333;
+    padding: 10px 0;
 }
 
 nav ul {
@@ -30,28 +30,28 @@ nav ul {
 
 nav ul li {
     display: inline;
-    margin: 0 15px; /* Margin */
+    margin: 0 15px;
 }
 
 nav ul li a {
-    color: white; /* Text color */
+    color: white;
     text-decoration: none;
-    font-size: 18px; /* Font setting */
-    padding: 8px 12px; /* Padding */
-    border: 1px solid transparent; /* Border */
+    font-size: 18px;
+    padding: 8px 12px;
+    border: 1px solid transparent;
 }
 
-/* Hover Effect on Links */
+/* Hover Effect */
 nav ul li a:hover {
-    background-color: #0073e6; /* Background color */
-    border: 1px solid white; /* Border */
+    background-color: #0073e6;
+    border: 1px solid white;
 }
 
-/* Main Content Section */
+/* Main Content */
 section {
     width: 80%;
-    margin: 20px auto; /* Margin */
-    padding: 20px; /* Padding */
-    background-color: white; /* Background color */
-    border: 2px solid #ccc; /* Border */
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border: 2px solid #ccc;
 }
