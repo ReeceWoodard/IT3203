@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML Quiz</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .quiz-container {
+            width: 80%;
+            margin: 20px auto;
+            background-color: white;
+            padding: 20px;
+            border: 2px solid #ccc;
+        }
+
+        .question {
+            margin-bottom: 20px;
+        }
+
+        .question h3 {
+            margin-bottom: 10px;
+        }
+
+        .result {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>HTML & Web Quiz</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="html1.html">HTML 1.0</a></li>
+            <li><a href="html5.html">HTML5</a></li>
+            <li><a href="references.html">References</a></li>
+            <li><a href="quiz.html">Quiz</a></li>
+        </ul>
+    </nav>
+
+    <section class="quiz-container">
+        <form id="quizForm">
+            <!-- Multiple choice (1 answer) -->
+            <div class="question">
+                <h3>1. Who invented the World Wide Web?</h3>
+                <label><input type="radio" name="q1" value="a"> Steve Jobs</label><br>
+                <label><input type="radio" name="q1" value="b"> Bill Gates</label><br>
+                <label><input type="radio" name="q1" value="c"> Tim Berners-Lee</label><br>
+            </div>
+
+            <!-- Multiple choice (1 answer) -->
+            <div class="question">
+                <h3>2. What year was HTML5 officially released?</h3>
+                <label><input type="radio" name="q2" value="a"> 2008</label><br>
+                <label><input type="radio" name="q2" value="b"> 2014</label><br>
+                <label><input type="radio" name="q2" value="c"> 2020</label><br>
+            </div>
+
+            <!-- Multiple choice (1 answer) -->
+            <div class="question">
+                <h3>3. What does HTML stand for?</h3>
+                <label><input type="radio" name="q3" value="a"> HighText Machine Language</label><br>
+                <label><input type="radio" name="q3" value="b"> HyperText Markup Language</label><br>
+                <label><input type="radio" name="q3" value="c"> Hyperlink and Text Markup Language</label><br>
+            </div>
+
+            <!-- Fill-in-the-blank -->
+            <div class="question">
+                <h3>4. Fill in the blank: HTML was first introduced in the year ____.</h3>
+                <input type="text" name="q4">
+            </div>
+
+            <!-- Multiple choice (2 answers) -->
+            <div class="question">
+                <h3>5. Which of the following are features of HTML5? (Select all that apply)</h3>
+                <label><input type="checkbox" name="q5" value="a"> Native video and audio support</label><br>
+                <label><input type="checkbox" name="q5" value="b"> Requires Flash plugin</label><br>
+                <label><input type="checkbox" name="q5" value="c"> Canvas and WebGL support</label><br>
+            </div>
+
+            <button type="button" onclick="gradeQuiz()">Submit</button>
+            <button type="reset">Restart</button>
+        </form>
+
+        <div class="result" id="result"></div>
+    </section>
+
+    <script>
+        function gradeQuiz() {
+            let score = 0;
+            const total = 5;
+            let resultText = "";
+
+            // Question 1
+            const q1 = document.querySelector('input[name="q1"]:checked');
+            if (q1 && q1.value === "c") { score++; resultText += "Q1: Correct<br>"; }
+            else { resultText += "Q1: Incorrect (Answer: Tim Berners-Lee)<br>"; }
+
+            // Question 2
+            const q2 = document.querySelector('input[name="q2"]:checked');
+            if (q2 && q2.value === "b") { score++; resultText += "Q2: Correct<br>"; }
+            else { resultText += "Q2: Incorrect (Answer: 2014)<br>"; }
+
+            // Question 3
+            const q3 = document.querySelector('input[name="q3"]:checked');
+            if (q3 && q3.value === "b") { score++; resultText += "Q3: Correct<br>"; }
+            else { resultText += "Q3: Incorrect (Answer: HyperText Markup Language)<br>"; }
+
+            // Question 4
+            const q4 = document.querySelector('input[name="q4"]').value.trim();
+            if (q4 === "1993") { score++; resultText += "Q4: Correct<br>"; }
+            else { resultText += "Q4: Incorrect (Answer: 1993)<br>"; }
+
+            // Question 5
+            const q5Answers = Array.from(document.querySelectorAll('input[name="q5"]:checked')).map(cb => cb.value);
+            if (q5Answers.includes("a") && q5Answers.includes("c") && !q5Answers.includes("b")) {
+                score++; resultText += "Q5: Correct<br>";
+            } else {
+                resultText += "Q5: Incorrect (Answer: a and c)<br>";
+            }
+
+            resultText += `<br>Total Score: ${score}/${total}<br>`;
+            resultText += score >= 3 ? "You Passed" : "You Failed";
+
+            document.getElementById("result").innerHTML = resultText;
+        }
+    </script>
+</body>
+</html>
