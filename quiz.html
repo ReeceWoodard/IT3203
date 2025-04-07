@@ -28,67 +28,69 @@
     </style>
 </head>
 <body>
-    <header>
-        <h1>HTML & Web Quiz</h1>
-    </header>
+    <div class="container">
+        <header>
+            <h1>HTML & Web Quiz</h1>
+        </header>
 
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="html1-2.html">HTML 1.0 and 2.0</a></li>
-            <li><a href="html4.html">HTML 4.0</a></li>
-            <li><a href="html5.html">HTML5</a></li>
-            <li><a href="references.html">References</a></li>
-            <li><a href="quiz.html">Quiz</a></li>
-        </ul>
-    </nav>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="html1-2.html">HTML 1.0 and 2.0</a></li>
+                <li><a href="html4.html">HTML 4.0</a></li>
+                <li><a href="html5.html">HTML5</a></li>
+                <li><a href="references.html">References</a></li>
+                <li><a href="quiz.html">Quiz</a></li>
+            </ul>
+        </nav>
 
-    <section class="quiz-container">
-        <form id="quizForm">
+        <section class="quiz-container">
+            <form id="quizForm">
             <!-- Multiple choice (1 answer) -->
-            <div class="question">
-                <h3>1. Who invented the World Wide Web?</h3>
-                <label><input type="radio" name="q1" value="a"> Steve Jobs</label><br>
-                <label><input type="radio" name="q1" value="b"> Bill Gates</label><br>
-                <label><input type="radio" name="q1" value="c"> Tim Berners-Lee</label><br>
-            </div>
-
-            <!-- Multiple choice (1 answer) -->
-            <div class="question">
-                <h3>2. What year was HTML5 officially released?</h3>
-                <label><input type="radio" name="q2" value="a"> 2008</label><br>
-                <label><input type="radio" name="q2" value="b"> 2014</label><br>
-                <label><input type="radio" name="q2" value="c"> 2020</label><br>
-            </div>
+                <div class="question">
+                    <h3>1. Who invented the World Wide Web?</h3>
+                    <label><input type="radio" name="q1" value="a"> Steve Jobs</label><br>
+                    <label><input type="radio" name="q1" value="b"> Bill Gates</label><br>
+                    <label><input type="radio" name="q1" value="c"> Tim Berners-Lee</label><br>
+                </div>
 
             <!-- Multiple choice (1 answer) -->
-            <div class="question">
-                <h3>3. What does HTML stand for?</h3>
-                <label><input type="radio" name="q3" value="a"> HighText Machine Language</label><br>
-                <label><input type="radio" name="q3" value="b"> HyperText Markup Language</label><br>
-                <label><input type="radio" name="q3" value="c"> Hyperlink and Text Markup Language</label><br>
-            </div>
+                <div class="question">
+                    <h3>2. What year was HTML5 officially released?</h3>
+                    <label><input type="radio" name="q2" value="a"> 2008</label><br>
+                    <label><input type="radio" name="q2" value="b"> 2014</label><br>
+                    <label><input type="radio" name="q2" value="c"> 2020</label><br>
+                </div>
+
+            <!-- Multiple choice (1 answer) -->
+                <div class="question">
+                    <h3>3. What does HTML stand for?</h3>
+                    <label><input type="radio" name="q3" value="a"> HighText Machine Language</label><br>
+                    <label><input type="radio" name="q3" value="b"> HyperText Markup Language</label><br>
+                    <label><input type="radio" name="q3" value="c"> Hyperlink and Text Markup Language</label><br>
+                </div>
 
             <!-- Fill-in-the-blank -->
-            <div class="question">
-                <h3>4. Fill in the blank: HTML was first introduced in the year ____.</h3>
-                <input type="text" name="q4">
-            </div>
+                <div class="question">
+                    <h3>4. Fill in the blank: HTML was first introduced in the year ____.</h3>
+                    <input type="text" name="q4">
+                </div>
 
             <!-- Multiple choice (2 answers) -->
-            <div class="question">
-                <h3>5. Which of the following are features of HTML5? (Select all that apply)</h3>
-                <label><input type="checkbox" name="q5" value="a"> Native video and audio support</label><br>
-                <label><input type="checkbox" name="q5" value="b"> Requires Flash plugin</label><br>
-                <label><input type="checkbox" name="q5" value="c"> Canvas and WebGL support</label><br>
-            </div>
+                <div class="question">
+                    <h3>5. Which of the following are features of HTML5? (Select all that apply)</h3>
+                    <label><input type="checkbox" name="q5" value="a"> Native video and audio support</label><br>
+                    <label><input type="checkbox" name="q5" value="b"> Requires Flash plugin</label><br>
+                    <label><input type="checkbox" name="q5" value="c"> Canvas and WebGL support</label><br>
+                </div>
 
-            <button type="button" onclick="gradeQuiz()">Submit</button>
-            <button type="reset">Restart</button>
-        </form>
+                <button type="button" onclick="gradeQuiz()">Submit</button>
+                <button type="reset">Restart</button>
+            </form>
 
-        <div class="result" id="result"></div>
-    </section>
+            <div class="result" id="result"></div>
+        </section>
+    </div>
 
     <script>
         function gradeQuiz() {
