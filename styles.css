@@ -30,6 +30,14 @@ header {
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
+header h1,
+header h2,
+header h3,
+header h4 {
+    color: white;
+    margin: 5px 0;
+}
+
 /* Navigation */
 nav {
     background-color: #333;
