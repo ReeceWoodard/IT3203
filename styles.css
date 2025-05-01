@@ -95,13 +95,6 @@ ul li {
     margin-bottom: 8px;
 }
 
-/* Fixed Container */
-.container {
-    width: 1000px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
 /* Quiz Container Section */
 section form {
     display: flex;
